@@ -48,6 +48,6 @@ from discriminator")
 
 ## To reproduce results
 
-Scripts are written in Python3 with torch 0.3.1 (built from source) and
+Scripts are written in Python3 with PyTorch 0.3.1 (built from source) and
 torchvision 0.2.0. Code for generating the sigmoidal output comes from running
 `l1_gan.py`. The unbounded gan results come from running `l1_gan_unbounded.py`.
