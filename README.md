@@ -33,7 +33,7 @@ L1 loss functions above with a sigmoid output should fail to produce any decent
 results. Indeed, this is the case with numeric experiments.  After 100 epochs
 of training on Fashion MNIST, we have the following:
 
-![sigmoid_output](/a/raw/b/l1_output/output_99.jpg "Sigmoid
+![sigmoid_output](l1_output/output_99.jpg "Sigmoid
 output from discriminator")
 
 ### Discriminator with unbounded output
@@ -43,7 +43,7 @@ comparisons to the Wasserstein GAN are less appropriate with the expanded
 codomain of the discriminator. For comparison with above, here are the results
 after 100 epochs of training with an unbounded discriminator:
 
-![sigmoid_output](/a/raw/b/l1_unbounded_output/output_99.jpg "Unbounded output
+![sigmoid_output](l1_unbounded_output/output_99.jpg "Unbounded output
 from discriminator")
 
 
