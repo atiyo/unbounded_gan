@@ -6,7 +6,7 @@ saturated and hinder the ability of generator networks to learn.
 
 The point of this repository is to demonstrate that sometimes it can be best to
 lose these final activations from discriminator networks. The final layer of
-the discriminator is fully connected, thus its becomes unbounded, hence the
+the discriminator is fully connected, thus it becomes unbounded, hence the
 title of the repository.
 
 At the very least, this should be an easy thing to
@@ -27,10 +27,11 @@ In the case where the discriminator network is constrained to lie in the
 interval (0,1), the derivatives of the L1 loss functions are the same as
 derivatives of the resulting loss functions from the [Wasserstein GAN (Arjovsky
 et al., 2017)](https://arxiv.org/abs/1701.07875). The Wasserstein GAN framework
-relies on the discriminator having Lipshitz constraints. This provides some
-heuristic basis for believing that the L1 loss functions above with a sigmoid
-output should fail to produce any decent results. Indeed, this is the case.
-After 100 epochs of training on Fashion MNIST, we have the following:
+relies on the discriminator having Lipshitz constraints. We have not imposed
+any such constraints. This provides some heuristic basis for believing that the
+L1 loss functions above with a sigmoid output should fail to produce any decent
+results. Indeed, this is the case with numeric experiments.  After 100 epochs
+of training on Fashion MNIST, we have the following:
 
 ![sigmoid_output](/a/raw/b/l1_output/output_99.jpg "Sigmoid
 output from discriminator")
@@ -40,7 +41,7 @@ output from discriminator")
 Simply removing the sigmoid activation leads to much better results. Note that
 comparisons to the Wasserstein GAN are less appropriate with the expanded
 codomain of the discriminator. For comparison with above, here are the results
-after 100 epochs of training:
+after 100 epochs of training with an unbounded discriminator:
 
 ![sigmoid_output](/a/raw/b/l1_unbounded_output/output_99.jpg "Unbounded output
 from discriminator")
