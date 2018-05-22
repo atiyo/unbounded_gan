@@ -1,13 +1,11 @@
 # Unbounded Discriminators in GANs
 
-Discriminators in Generative Adversarial Networks are typically taken to be
+Discriminators in Generative Adversarial Networks (GANs) are typically taken to be
 classifiers with sigmoid/softmax outputs. These outputs might easily be
 saturated and hinder the ability of generator networks to learn.
 
-The point of this repository is to demonstrate that sometimes it can be best to
-lose these final activations from discriminator networks. The final layer of
-the discriminator is fully connected, thus it becomes unbounded, hence the
-title of the repository.
+Apart from providing stronger gradients to the generator network, this might
+also open the opportunity to experiment with novel loss functions (see below).
 
 At the very least, this should be an easy thing to
 try, since it only involves deleting a single line from the discriminator.
