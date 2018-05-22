@@ -4,8 +4,9 @@ Discriminators in Generative Adversarial Networks (GANs) are typically taken to 
 classifiers with sigmoid/softmax outputs. These outputs might easily be
 saturated and hinder the ability of generator networks to learn.
 
-Apart from providing stronger gradients to the generator network, this might
-also open the opportunity to experiment with novel loss functions (see below).
+What if we remove these activations? Apart from providing stronger gradients to
+the generator network, this might also open the opportunity to experiment with
+novel loss functions (see below).
 
 At the very least, this should be an easy thing to
 try, since it only involves deleting a single line from the discriminator.
